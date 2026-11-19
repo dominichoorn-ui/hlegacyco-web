@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLegacy Co | Tender Document QA &amp; Corporate Security Consultancy</title>
+<meta name="description" content="From the other side of the evaluation table. Tender document quality assurance and corporate security consultancy for South African businesses ready to win.">
+<meta property="og:title" content="HLegacy Co | From the other side of the evaluation table">
+<meta property="og:description" content="Tender document quality assurance and corporate security consultancy. Led by Dominic Hoorn, former evaluator of multi-million-rand public-sector security procurements.">
+<meta property="og:image" content="https://hlegacyco.com/assets/founder.jpg">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#364855; --slate-d:#243139; --ink:#1b252c; --gold:#d4af5a; --gold-l:#eed68c;
+  --paper:#f6f4ef; --text:#2a3338; --muted:#5d6a72; --line:#e3ddcf;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:Inter,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.65;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;color:var(--ink)}
+h2{font-size:clamp(32px,4vw,46px);margin:.35em 0 .5em}
+.rule{width:72px;height:3px;background:var(--gold);margin:18px 0 26px}
+.btn{display:inline-block;padding:14px 26px;border-radius:2px;font:600 14px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:.2s}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-l)}
+.btn-line{border:1px solid rgba(238,214,140,.6);color:var(--gold-l)}
+.btn-line:hover{background:rgba(238,214,140,.1)}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(36,49,57,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(212,175,90,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:42px}
+.brand span{font:600 22px/1 var(--serif);color:var(--gold-l);letter-spacing:.06em}
+.brand small{display:block;font:500 10px/1.4 var(--sans);letter-spacing:.24em;color:#aab6bd;text-transform:uppercase}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{color:#d9e0e4;text-decoration:none;font-size:14px;letter-spacing:.04em}
+nav a:hover{color:var(--gold-l)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--slate) 0%,var(--slate-d) 100%);color:#e9eef1;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:80px;padding-bottom:80px}
+.hero h1{color:#fff;font-size:clamp(40px,5.4vw,68px)}
+.hero h1 em{font-style:normal;color:var(--gold-l)}
+.hero p.lead{font-size:19px;color:#c9d3d8;max-width:560px;margin:22px 0 34px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.portrait{position:relative}
+.portrait img{border:1px solid rgba(212,175,90,.5);box-shadow:0 30px 60px rgba(0,0,0,.35);width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.portrait .tag{max-width:330px}
+body{overflow-x:hidden}
+.hero .wrap>*,.split>*,.cards>*,.strip .wrap>*{min-width:0}
+h1,h2,h3{overflow-wrap:break-word}
+@media(max-width:600px){
+  body{font-size:16px}
+  .hero h1{font-size:36px}
+  .hero .wrap{padding-top:48px;padding-bottom:56px;gap:36px}
+  .eyebrow{letter-spacing:.14em;line-height:1.5}
+  .portrait .tag{left:0}
+  section{padding:64px 0}
+  .card{padding:26px}
+  .creds li{flex-direction:column;gap:2px}
+}
+.portrait .tag{position:absolute;left:-18px;bottom:28px;background:var(--ink);border-left:3px solid var(--gold);padding:14px 18px;font-size:13px;color:#d9e0e4;max-width:270px}
+.portrait .tag b{display:block;color:var(--gold-l);font:600 18px/1.2 var(--serif)}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.portrait{max-width:420px}}
+
+/* strip */
+.strip{background:var(--ink);color:#c9d3d8;border-top:1px solid rgba(212,175,90,.25)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:30px 24px}
+.strip b{display:block;font:600 30px/1 var(--serif);color:var(--gold-l);margin-bottom:6px}
+.strip span{font-size:13px;letter-spacing:.03em}
+@media(max-width:820px){.strip .wrap{grid-template-columns:repeat(2,1fr)}}
+
+section{padding:96px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:32px}}
+
+/* ethos */
+.motto{font:italic 600 clamp(28px,3.4vw,40px)/1.2 var(--serif);color:var(--slate);border-left:3px solid var(--gold);padding-left:22px;margin:8px 0 22px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pillar{background:#fff;border:1px solid var(--line);padding:26px}
+.pillar h3{font-size:24px;margin-bottom:8px}
+.pillar p{font-size:15px;color:var(--muted)}
+.pillar .n{font:600 13px var(--sans);color:var(--gold);letter-spacing:.2em}
+@media(max-width:600px){.pillars{grid-template-columns:1fr}}
+
+/* services */
+.dark{background:linear-gradient(180deg,var(--slate-d),var(--ink));color:#d9e0e4}
+.dark h2,.dark h3{color:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+@media(max-width:1060px){.cards{grid-template-columns:1fr 1fr}}
+.card .go{display:inline-block;margin-top:20px;color:var(--gold-l);font:600 13px var(--sans);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(238,214,140,.5);padding-bottom:3px}
+.quick{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;border-top:1px solid rgba(255,255,255,.1);padding-top:28px}
+.quick p{color:#b9c5cb;font-size:15px;flex-basis:100%}
+.origins{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 4px}
+.badge{display:flex;align-items:center;gap:12px;border:1px solid var(--line);background:#fff;padding:12px 16px}
+.badge .mk{width:52px;height:52px;flex:none;border-radius:50%;background:var(--slate);border:2px solid var(--gold);color:var(--gold-l);display:grid;place-items:center;font:700 11px var(--sans);letter-spacing:.02em}
+.badge b{display:block;color:var(--ink);font-size:14px}
+.badge span{font-size:12.5px;color:var(--muted)}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,90,.28);padding:36px}
+.card h3{font-size:30px;margin:10px 0 12px}
+.card p{color:#b9c5cb;font-size:16px}
+.card ul{list-style:none;margin:22px 0 0}
+.card li{padding:11px 0 11px 26px;border-top:1px solid rgba(255,255,255,.08);position:relative;font-size:15.5px}
+.card li:before{content:"";position:absolute;left:0;top:19px;width:10px;height:10px;border:2px solid var(--gold);transform:rotate(45deg)}
+.card .note{margin-top:18px;font-size:12.5px;color:#93a3ab}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+
+/* where bids are lost */
+.lost{counter-reset:k;display:grid;gap:14px;margin-top:10px}
+.lost div{background:#fff;border:1px solid var(--line);padding:18px 20px 18px 70px;position:relative}
+.lost div:before{counter-increment:k;content:counter(k);position:absolute;left:20px;top:16px;width:32px;height:32px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font:600 15px var(--sans);color:var(--slate)}
+.lost b{display:block;color:var(--ink)}
+.lost span{font-size:15px;color:var(--muted)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.step{border-top:3px solid var(--gold);padding-top:22px}
+.step .eyebrow{color:var(--slate)}
+.step h3{font-size:30px;margin:8px 0}
+.step p{color:var(--muted);font-size:15.5px}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* founder */
+.founder img{border:1px solid var(--line)}
+.creds{list-style:none;margin-top:22px}
+.creds li{padding:12px 0;border-top:1px solid var(--line);display:flex;gap:16px}
+.creds b{min-width:150px;color:var(--slate);font-weight:600}
+
+/* contact */
+.contact{background:var(--slate);color:#e6ecef;text-align:center}
+.contact h2{color:#fff}
+.contact p{max-width:620px;margin:0 auto 30px;color:#c9d3d8}
+.contact .rule{margin:18px auto 26px}
+.contact .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{background:var(--ink);color:#8796a0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:28px 24px}
+footer a{color:#b9c5cb}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="HLegacy Co home">
+      <img src="assets/helmet.png" alt="">
+      <div><span>HLEGACY CO</span><small>Create what we have spoken</small></div>
+    </a>
+    <nav><ul>
+      <li><a href="#ethos">Ethos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#founder">Credentials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Tender Document QA &middot; Corporate Security Consultancy</p>
+      <h1>From the other side of the <em>evaluation table.</em></h1>
+      <p class="lead">For twelve years we sat where your bid is judged. Today we stand beside growing South African businesses, making sure good companies are never knocked out on a technicality, and are scored on what they can truly deliver.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#contact">Start a conversation</a>
+        <a class="btn btn-line" href="#services">Our services</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="assets/founder.jpg" alt="Dominic Hoorn, founder of HLegacy Co" width="900" height="1200">
+      <div class="tag"><b>Dominic Hoorn</b>Security Manager | Forensic Investigations Expert | PSIRA &amp; NKP Accredited | Strategic Risk Management</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap">
+  <div><b>20+</b><span>years in security, risk &amp; investigations</span></div>
+  <div><b>12</b><span>years driving procurements through Bid Specification, Evaluation &amp; Adjudication</span></div>
+  <div><b>NKP</b><span>Acting CSO, National Key Point telecoms portfolio</span></div>
+  <div><b>SAPS &middot; SANDF</b><span>a service career that began in uniform</span></div>
+</div></div>
+
+<section id="ethos">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Our ethos</p>
+      <h2>Your word, made real.</h2>
+      <p class="motto">&ldquo;Create what we have spoken.&rdquo;</p>
+      <p>Every bid is a promise to a client. Every contract is a promise kept. Our work is to make sure what you say on paper is compliant, credible and scored on merit, and then to help you deliver on it, tender after tender.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><span class="n">01</span><h3>Integrity</h3><p>We never approach evaluators or officials. We act for one bidder per tender, so no competitor's information ever crosses our desk.</p></div>
+      <div class="pillar"><span class="n">02</span><h3>Precision</h3><p>Compliance first. Every returnable, every signature, every certificate checked against the specification before it leaves your hands.</p></div>
+      <div class="pillar"><span class="n">03</span><h3>Partnership</h3><p>We grow with you. Our fees are built to fit growing businesses, and we succeed when you win.</p></div>
+      <div class="pillar"><span class="n">04</span><h3>Discretion</h3><p>Your pricing, strategy and documents stay confidential, protected under POPIA and our engagement terms.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="dark">
+  <div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h2>Three disciplines. One standard.</h2>
+    <div class="cards">
+      <div class="card">
+        <p class="eyebrow">01</p>
+        <h3>Tender Document Quality Assurance</h3>
+        <p>For security, cleaning and facilities companies bidding on public-sector and corporate tenders.</p>
+        <ul>
+          <li>Bid compliance audit with a red / amber / green disqualification-risk report</li>
+          <li>Full bid preparation and QA: functionality evidence, methodology, pricing-schedule review</li>
+          <li>Compliance-pack upkeep: tax, CSD, B-BBEE and PSIRA always current</li>
+          <li>Pipeline retainer: continuous tender scanning and structured bidding</li>
+          <li>Re-tender and renewal preparation for contracts you win</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="eyebrow">02</p>
+        <h3>Corporate Due Diligence &amp; Background Reports</h3>
+        <p>Know exactly who you are dealing with before you sign, pay or partner.</p>
+        <ul>
+          <li>Company registration, status and directors</li>
+          <li>Key-person background and adverse media</li>
+          <li>Sanctions and PEP list screening; regulator and licence checks</li>
+          <li>Litigation and news history, with a plain-English risk rating</li>
+        </ul>
+        <p class="note">Lawful, publicly available sources only, in line with POPIA. No private records, no surveillance of individuals.</p>
+      </div>
+      <div class="card">
+        <p class="eyebrow">03</p>
+        <h3>Corporate &amp; Business Security Consultancy</h3>
+        <p>For organisations that need to see their security, people and process risks the way an investigator does.</p>
+        <ul>
+          <li>Comprehensive security risk assessment: physical, people, process and technology</li>
+          <li>Vulnerability assessment and red-team style physical penetration exercises</li>
+          <li>Insider-threat risk assessment: off-boarding, data theft, sabotage, disgruntled ex-employees</li>
+          <li>Security contract and SLA scrutiny for outsourced guarding and electronic security</li>
+        </ul>
+        <p class="note">Security consultancy is provided by Dominic Hoorn, PSIRA-registered security advisor (Reg. 2976170).</p>
+      </div>
+    </div>
+    <div class="quick">
+      <p><b style="color:#fff">Need a quick start?</b> Two fixed-price packages are available to order online, with secure payment.</p>
+      <a class="btn btn-line" href="https://www.fiverr.com/dominic5rr/review-and-qa-your-tender-or-bid-proposal-for-compliance-and-scoring" target="_blank" rel="noopener">Tender QA package</a>
+      <a class="btn btn-line" href="https://www.fiverr.com/dominic5rr/research-a-company-and-prepare-a-corporate-background-report" target="_blank" rel="noopener">Due diligence report</a>
+    </div>
+  </div>
+</section>
+
+<section id="lost">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">What we see from the other side</p>
+      <h2>Most bids aren&rsquo;t lost on price.</h2>
+      <p>They&rsquo;re lost before anyone looks at the price. These five mistakes knock out capable companies every week, and every one of them is fixable before you submit.</p>
+    </div>
+    <div class="lost">
+      <div><b>Compliance documents missing or expired</b><span>Tax status, CSD, B-BBEE and PSIRA certificates must be valid on the closing date.</span></div>
+      <div><b>SBD forms incomplete or unsigned</b><span>Blank declarations, or a signatory without a resolution authorising them.</span></div>
+      <div><b>Compulsory briefing missed</b><span>No signature on the attendance register means no valid bid.</span></div>
+      <div><b>Pricing that breaks the rules</b><span>Rates below the sectoral or bargaining-council minimum wage, or an altered schedule.</span></div>
+      <div><b>Functionality threshold not met</b><span>A generic profile instead of evidence scored against each criterion.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <p class="eyebrow">How we work</p>
+    <h2>Bid. Win. Grow.</h2>
+    <div class="steps">
+      <div class="step"><p class="eyebrow">Step 1</p><h3>Bid</h3><p>We review the specification with you, close every compliance gap and build a bid that earns its functionality points.</p></div>
+      <div class="step"><p class="eyebrow">Step 2</p><h3>Win</h3><p>A compliant, credible bid is judged on merit. When you&rsquo;re awarded, our success is tied to yours.</p></div>
+      <div class="step"><p class="eyebrow">Step 3</p><h3>Grow</h3><p>We keep your compliance current, find the next tenders and prepare you for re-tender, so one win becomes a portfolio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="wrap split">
+    <div class="founder"><img src="assets/founder-standing.jpg" alt="Dominic Hoorn" loading="lazy"></div>
+    <div>
+      <p class="eyebrow">Founder</p>
+      <h2>Dominic Hoorn</h2>
+      <div class="rule"></div>
+      <div class="origins" aria-label="Service origins">
+        <div class="badge"><div class="mk">SANDF</div><div><b>South African National Defence Force</b><span>1999 – 2004 &middot; Corporal &middot; tactical &amp; platoon command</span></div></div>
+        <div class="badge"><div class="mk">SAPS</div><div><b>South African Police Service</b><span>2005 – 2011 &middot; Protection &amp; Security Division</span></div></div>
+      </div>
+      <p style="margin-top:18px">Senior security executive and accredited forensic investigator with more than twenty years across public-sector anti-fraud, critical-infrastructure security, port and logistics security and executive protection. For twelve years he led security and investigations for a national public-sector agency in the Western Cape, driving multi-million-rand security procurements from specification through evaluation and adjudication to contractor onboarding.</p>
+      <ul class="creds">
+        <li><b>Qualifications</b><span>B Tech Forensic Investigations (NQF 7); ND Security Risk Management, UNISA</span></li>
+        <li><b>Protection</b><span>SAPS Protection &amp; Security Division: close protection of Heads of State and Premiers; commanded the protection detail of UN Secretary-General Kofi Annan, World Economic Forum, Cape Town 2007</span></li>
+        <li><b>Leadership</b><span>Acting Chief Security Officer, National Key Point telecoms portfolio</span></li>
+        <li><b>Procurement</b><span>12 years of Bid Specification, Evaluation and Adjudication Committee work</span></li>
+        <li><b>Investigations</b><span>Fraud, embezzlement and theft matters referred for prosecution; expert witness testimony</span></li>
+        <li><b>Registration</b><span>PSIRA Grade Special, security advisor &amp; investigator</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow">Let&rsquo;s talk</p>
+    <h2>Tell us what you&rsquo;re bidding on next.</h2>
+    <div class="rule"></div>
+    <p>Every engagement starts with a conversation, not a price list. Tell us where you are and where you&rsquo;re aiming, and we&rsquo;ll shape an arrangement that fits your business.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="mailto:dominic@hlegacyco.com?subject=Tender%20enquiry">dominic@hlegacyco.com</a>
+      <a class="btn btn-line" href="https://www.linkedin.com/in/dominic-hoorn-67992819a" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span>&copy; 2026 HLegacy Co (Pty) Ltd &middot; Cape Town, South Africa</span>
+  <span>We act for one bidder per tender and never engage evaluators or officials. Personal information is handled in line with POPIA.</span>
+</div></footer>
+</body>
+</html>
