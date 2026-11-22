@@ -10,12 +10,15 @@
       'Service: ' + v('service'),
       'I am enquiring as: ' + v('who'),
       'Name: ' + v('name'),
-      'Phone (optional): ' + (v('phone') || '-'),
+      'Phone (optional): ' + (v('phone') || '-')
+    ].concat(Array.prototype.map.call(f.querySelectorAll('[data-extra]'), function(el){
+      return el.getAttribute('data-extra') + ': ' + (el.value.trim() || '-');
+    })).concat([
       '', 'WHAT I NEED / MY SITUATION:', v('needs'),
       '', 'WHAT CONCERNS ME:', v('concerns'),
       '', 'MY QUESTIONS:', v('questions') || '-',
       '', 'WHAT I ULTIMATELY WANT:', v('outcome')
-    ].join('\n');
+    ]).join('\n');
   }
   function ok(){
     var msg = f.querySelector('.err');

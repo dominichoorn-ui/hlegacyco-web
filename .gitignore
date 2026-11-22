@@ -1,0 +1,9 @@
+*.clip.md5
+
+# private working files never belong on the public site
+*.docx
+*.doc
+*.xlsx
+*.zip
+*.py
+CLAUDE.md
