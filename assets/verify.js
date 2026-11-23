@@ -34,7 +34,7 @@
     function viaMail(){ window.location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(compose()); }
     if (!window.fetch) { viaMail(); return; }
     btn.disabled = true; btn.textContent = 'Sending...';
-    fetch('https://formsubmit.co/ajax/' + C.email, {
+    fetch('https://formsubmit.co/ajax/' + (C.formKey || C.email), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ _subject: subj, _template: 'box', _captcha: 'false',
