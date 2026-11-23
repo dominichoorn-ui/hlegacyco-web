@@ -28,8 +28,29 @@
   }
   f.addEventListener('submit', function(ev){
     ev.preventDefault(); if(!ok()) return;
+    if (v('_honey')) return; // bot trap
     var subj = 'Consultation request: ' + v('service');
-    window.location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(compose());
+    var btn = f.querySelector('button[type=submit]'), msg = f.querySelector('.err');
+    function viaMail(){ window.location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(compose()); }
+    if (!window.fetch) { viaMail(); return; }
+    btn.disabled = true; btn.textContent = 'Sending...';
+    fetch('https://formsubmit.co/ajax/' + C.email, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ _subject: subj, _template: 'box', _captcha: 'false',
+        name: v('name'), phone: v('phone') || '-', service: v('service'), enquiring_as: v('who'),
+        message: compose() })
+    }).then(function(r){ return r.json().then(function(d){ return { ok: r.ok, d: d }; }); })
+      .then(function(res){
+        if (!res.ok || (res.d && String(res.d.success) === 'false')) throw new Error('send failed');
+        f.innerHTML = '<div class="full sent" role="status"><h3>Thank you, your request has been received.</h3>' +
+          '<p>It has gone straight to our office and is treated in strict confidence. We reply in writing, usually within one business day.</p></div>';
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = 'Send';
+        msg.textContent = 'We could not send this automatically. Your email app will now open with your request ready to send. Alternatively, email ' + C.email + '.';
+        setTimeout(viaMail, 1200);
+      });
   });
   if (wa) wa.addEventListener('click', function(){ if(!ok()) return;
     window.open('https://wa.me/' + C.whatsapp + '?text=' + encodeURIComponent(compose()), '_blank', 'noopener'); });
