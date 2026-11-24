@@ -13,6 +13,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/verify.css?v=6">
+<style>
+.s-hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+.s-hero .portrait{max-width:360px;justify-self:end;width:100%}.s-hero .portrait img{border:1px solid rgba(212,175,90,.5);box-shadow:0 30px 60px rgba(0,0,0,.35);width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 25%}
+@media(max-width:900px){.s-hero .wrap{grid-template-columns:1fr}.s-hero .portrait{max-width:380px;justify-self:start}}
+</style>
 </head>
 <body>
 <header><div class="wrap nav">
@@ -27,15 +32,17 @@
   </ul></nav>
 </div></header>
 <main>
-<section class="hero"><div class="wrap">
-<p class="crumb"><a href="../">HLegacy Co</a> / Verification &amp; Intelligence Services</p>
+<section class="hero s-hero"><div class="wrap">
+<div><p class="crumb"><a href="../">HLegacy Co</a> / Verification &amp; Intelligence Services</p>
 <p class="eyebrow">Verification &amp; Intelligence Services</p>
 <h1>Before money or trust changes hands, <em>know who you&rsquo;re dealing with.</em></h1>
 <p class="lead">Verify the people, companies and assets behind a deal before money or trust changes hands. Led by a senior manager in security risk management and forensic investigations, with more than twenty years in security risk, investigation and public-sector procurement.</p>
 <div class="paths">
   <a class="path" href="#business"><b>For Businesses</b><span>Suppliers, hires, claims, debtors and unclaimed funds.</span></a>
   <a class="path" href="#individuals"><b>For Individuals</b><span>Homes, cars, builders, carers, online contacts and harassment.</span></a>
-</div></div></section>
+</div></div>
+<div class="portrait"><img src="../assets/portrait-verification.jpg" alt="Dominic Hoorn, Senior Manager: Security Risk Management and Forensic Investigations" width="805" height="1200"></div>
+</div></section>
 <section id="business"><div class="wrap">
 <p class="eyebrow">For businesses</p><h2>The questions that keep decision-makers up at night.</h2>
 <p style="max-width:720px;color:var(--muted);font-size:18px">A bid committee scores the documents in front of it. We look at the people and companies behind them, before the award, the hire or the payment.</p>
